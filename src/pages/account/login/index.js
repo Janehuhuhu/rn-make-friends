@@ -49,11 +49,11 @@ function Login(props) {
 
   // 获取验证码
   const getVCode = async () => {
-    // if (!validatePhone(phoneNumber)) {
-    //   setPhoneValid(false)
-    //   return
-    // }
-    // setPhoneValid(true)
+    if (!validatePhone(phoneNumber)) {
+      setPhoneValid(false)
+      return
+    }
+    setPhoneValid(true)
 
     const res = await request.post(ACCOUNT_LOGIN, { phone: phoneNumber });
     if (res.status === 200) {

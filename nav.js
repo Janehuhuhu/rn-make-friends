@@ -38,7 +38,7 @@ export default class Nav extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="UserInfo">
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="UserInfo" component={UserInfo} />
           <Stack.Screen name="Home" component={HomeScreen} />
